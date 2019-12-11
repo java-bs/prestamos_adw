@@ -2,7 +2,7 @@ package com.prestamosapi.prestamosapi.dominio;
 
 import java.math.BigDecimal;
 
-public class Prestamo {
+public abstract class Prestamo {
     // Atributos
     private BigDecimal monto;
     private Integer plazoEnMeses;

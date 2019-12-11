@@ -1,8 +1,14 @@
 package com.prestamosapi.prestamosapi.dominio;
 
-public class PrestamoPersonal {
+import java.math.BigDecimal;
+
+public class PrestamoPersonal extends Prestamo {
     // Atributos
     private String situacionVeraz;
+
+    public PrestamoPersonal(BigDecimal monto, Integer cuotas) {
+        super(monto, cuotas);
+    }
 
     //Getters & Setters
     public String getSituacionVeraz() {

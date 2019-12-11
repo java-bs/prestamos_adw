@@ -1,8 +1,10 @@
 package com.prestamosapi.prestamosapi;
 
+import com.prestamosapi.prestamosapi.dominio.Banco;
 import com.prestamosapi.prestamosapi.dominio.Clientes;
 import com.prestamosapi.prestamosapi.dominio.Domicilio;
 import com.prestamosapi.prestamosapi.dominio.Prestamo;
+import com.prestamosapi.prestamosapi.dominio.PrestamoPersonal;
 import java.math.BigDecimal;
 
 public class Main {
@@ -11,10 +13,14 @@ public class Main {
         
         System.out.println("Hola Mundo");
 
+        Banco bancoSaenz = Banco.obtenerBanco();
+        
+        System.out.println("Iniciando sistema de banco: " + bancoSaenz);
+        
         //1er prestamo
         BigDecimal monto = new BigDecimal("15000.00");
         
-        Prestamo nuevoPrestamo = new Prestamo(monto, 36); 
+        Prestamo nuevoPrestamo = new PrestamoPersonal(monto, 36); 
 
 //        BigDecimal monto = new BigDecimal("15000.00");
 //        nuevoPrestamo.setMonto(monto);
@@ -28,7 +34,7 @@ public class Main {
         //2do prestamo
         monto = new BigDecimal("7000.00");
         
-        Prestamo nuevoPrestamo2 = new Prestamo(monto, 24); 
+        Prestamo nuevoPrestamo2 = new PrestamoPersonal(monto, 24); 
 
 //        BigDecimal monto = new BigDecimal("15000.00");
 //        nuevoPrestamo.setMonto(monto);
