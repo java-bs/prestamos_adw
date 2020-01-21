@@ -6,8 +6,10 @@ public class PrestamoPersonal extends Prestamo {
     // Atributos
     private String situacionVeraz;
 
-    public PrestamoPersonal(BigDecimal monto, Integer cuotas) {
-        super(monto, cuotas);
+    //Constructores
+    public PrestamoPersonal(Banco banco, BigDecimal monto, Integer cuotas, String situacionVeraz) {
+        super(banco, monto, cuotas);
+        this.situacionVeraz = situacionVeraz;
     }
 
     //Getters & Setters
@@ -18,4 +20,15 @@ public class PrestamoPersonal extends Prestamo {
         this.situacionVeraz = situacionVeraz;
     }
         
+    //Funciones
+    @Override
+    public String toString() {
+//        return "PrestamoPersonal{" + "situacionVeraz= " + situacionVeraz + '}';
+        return ", situacionVeraz= " + situacionVeraz;
+    }
+    
+//    @Override ESTO SOBREESCRIBE el de Prestamo
+//    public void imprimirDatos() {
+//        super.imprimirDatos();
+//    } 
 }

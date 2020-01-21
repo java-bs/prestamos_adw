@@ -8,23 +8,16 @@ public class Banco {
     private Banco(String codigo) {
         this.codigo = codigo;
     }
-
-    // Getters & Setters
-    public String getCodigo() {
-        return codigo;
-    }
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-    
+   
     //Funciones
     public static Banco obtenerBanco() {
         if(instancia == null) {
-            instancia = new Banco("SAENZ");
+            instancia = new Banco("SNZ");
         }
         return instancia;
     }
-
+    
+    //metódo perteneciente al objeto creado (la instancia)
     public String toString() {
         return "Banco{" + "codigo=" + codigo + '}';
     }
