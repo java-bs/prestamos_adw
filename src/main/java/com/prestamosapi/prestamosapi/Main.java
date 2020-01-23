@@ -1,8 +1,5 @@
 package com.prestamosapi.prestamosapi;
 
-//@Restconotroller para devolver objeto json
-//@controller devuelve string
-
 import com.prestamosapi.prestamosapi.dominio.Banco;
 import com.prestamosapi.prestamosapi.dominio.Clientes;
 import com.prestamosapi.prestamosapi.dominio.Domicilio;
@@ -13,18 +10,19 @@ import com.prestamosapi.prestamosapi.dominio.PrestamoHipotecario;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+//@Restconotroller para devolver objeto json
+//@controller devuelve string
+
 // importo clases para app web (xq no me las ofrece ??)
-//import org.springframework.boot.SpringApplication;
-//import org.springframework.boot.autoconfigure.SpringBootApplication;
-//import org.springframework.web.bind.annotation.GetMapping;
-//import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 // java ejecuta  ->  Main.main();
-//@SpringBootApplication
+@SpringBootApplication
 public class Main {
 
     public static void main(String[] args) {
-//        SpringApplication.run(Main.class, args);
+        SpringApplication.run(Main.class, args);
         
         System.out.println("Hola Mundo");
 
@@ -102,6 +100,5 @@ public class Main {
        // System.out.println(nuevoPrestamo2);
        
        cliente1.imprimirDatos();
-    }
-    
+    }    
 }
